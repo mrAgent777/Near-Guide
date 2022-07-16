@@ -21,7 +21,7 @@ ____
 
 ![w5](https://user-images.githubusercontent.com/101806416/179372850-c0e2d621-f5e2-40e0-bdf2-8305fcf2e7d8.png)
 ____
-* Congratulations you created your test account and got almost ~2000 Near
+* Congratulations you created your test account and got ~2000 Near
 
 ![w6](https://user-images.githubusercontent.com/101806416/179373070-4a0095d3-34f2-42e6-be6c-9accf7be8dfe.png)
 ____

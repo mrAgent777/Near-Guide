@@ -7,4 +7,4 @@
   >__After waiting a while, I got access to my server__
   >>![Hz3](https://user-images.githubusercontent.com/101806416/179366344-9966f8ac-c70f-4b84-84af-28440246967b.png)
   
-  ## __Now, using the server IP, username and password received in the mail connect to our server and proceed to the guide.__
+  ## __Now, using the server IP, username and password received in the mail connect to our server and proceed to the [guide](https://github.com/mrAgent777/Near-Guide/blob/main/Step%201%20:%20Create%20your%20Shardnet%20wallet.md).__

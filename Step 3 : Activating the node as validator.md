@@ -116,7 +116,7 @@ sudo systemctl reload neard
 ```
 journalctl -n 100 -f -u neard
 ```
-
+____
 ### Becoming a Validator
 
 In order to become a validator and enter the validator set, a minimum set of success criteria must be met.
@@ -131,6 +131,8 @@ In order to become a validator and enter the validator set, a minimum set of suc
 * Once in the validator set the validator must produce great than 90% of assigned blocks
 
 Check running status of validator node. If “Validator” is showing up, your pool is selected in the current validators list.
+___
 
+### Moving on step4
 
 

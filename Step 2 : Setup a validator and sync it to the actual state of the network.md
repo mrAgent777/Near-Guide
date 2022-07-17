@@ -34,3 +34,65 @@ node -v
 npm -v
 ```
 > ![v3](https://user-images.githubusercontent.com/101806416/179396940-3bffcb6e-3a20-4a64-b2bf-e08cbbfc4d30.png)
+___
+### Install NEAR-CLI
+
+Here's the Github Repository for NEAR CLI.: https://github.com/near/near-cli. NEAR-CLI is a command-line interface that communicates with the NEAR blockchain via remote procedure calls (RPC)
+```
+sudo npm install -g near-cli
+```
+
+* __Setup Shardnet (this is the network we will use for Stake Wars)__
+```
+export NEAR_ENV=shardnet
+```
+> Note. You can also run this command to set the Near testnet Environment persistent:
+```
+echo 'export NEAR_ENV=shardnet' >> ~/.bashrc
+```
+___
+### Validator Stats
+
+Now that NEAR-CLI is installed, let's test out the CLI and use the following commands to interact with the blockchain as well as to view validator stats.
+
+> * __Proposals:__ 
+>> * A proposal by a validator indicates they would like to enter the validator set, in order for a proposal to be accepted it must meet the minimum seat price.
+```
+near proposals
+```
+
+> * __Validators Current:__
+>> * This shows a list of active validators in the current epoch, the number of blocks produced, number of blocks expected, and online rate. Used to monitor if a validator is having issues.
+```
+near validators current
+```
+
+> * __Validators Next:__
+>> * This shows validators whose proposal was accepted one epoch ago, and that will enter the validator set in the next epoch.
+```
+near validators next
+```
+____
+
+### Setup your node
+
+Now begin to smoothly install the necessary software and configurations
+
+* __Install developer tools__
+
+```
+sudo apt install -y git binutils-dev libcurl4-openssl-dev zlib1g-dev libdw-dev libiberty-dev cmake gcc g++ python docker.io protobuf-compiler libssl-dev pkg-config clang llvm cargo
+```
+
+* __Install Python pip__
+```
+sudo apt install python3-pip
+```
+
+* __Set the configuration__
+```
+USER_BASE_BIN=$(python3 -m site --user-base)/bin
+export PATH="$USER_BASE_BIN:$PATH"
+```
+
+

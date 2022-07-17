@@ -113,8 +113,28 @@ source $HOME/.cargo/env
 ```
 ____
 ### Clone and build nearcore project from GitHub
+* __First, clone the nearcore__
+```
+git clone https://github.com/near/nearcore
+cd nearcore
+git fetch
+```
 
+* __Checkout master__
+```
+git checkout master
+```
 
+* __Compile nearcore binary__
+```
+cargo build -p neard --release --features shardnet
+```
+____
+### Initialize working directory
+In order to work properly, the NEAR node requires a working directory and a couple of configuration files. Generate the initial required working directory
+```
+./target/release/neard --home ~/.near init --chain-id shardnet --download-genesis
+```
 
 
 

@@ -33,3 +33,32 @@ near generate-key secdec.factory.shardnet.near
 ```
 cp ~/.near-credentials/shardnet/secdec.shardnet.near.json ~/.near/validator_key.json
 ```
+
+* __The content of the file validator_key.json needs to be changed slightly:__
+```
+nano ~/.near/validator_key.json
+```
+
+> Note. The account_id must match the staking pool contract name or you will not be able to sign blocks.
+
+Edit “account_id” => secdec.factory.shardnet.near, where secdec is your PoolName
+
+Change `private_key` to `secret_key`
+
+> It's been
+```
+{
+  "account_id": "secdec.shardnet.near",
+  "public_key": "ed25519:HeaBJ3xLgvZacQWmEctTeUqyfSU4SDEnEwckWxd92W2G",
+  "private_key": "ed25519:****"
+}
+```
+
+> This has become
+```
+{
+  "account_id": "secdec.factory.shardnet.near",
+  "public_key": "ed25519:HeaBJ3xLgvZacQWmEctTeUqyfSU4SDEnEwckWxd92W2G",
+  "secret_key": "ed25519:****"
+}
+```

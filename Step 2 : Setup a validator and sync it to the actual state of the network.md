@@ -95,4 +95,28 @@ USER_BASE_BIN=$(python3 -m site --user-base)/bin
 export PATH="$USER_BASE_BIN:$PATH"
 ```
 
+* __Install Building env__
+```
+sudo apt install clang build-essential make
+```
+
+* __Install Rust & Cargo__
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+> Note. Press 1 and press enter
+>> ![v4](https://user-images.githubusercontent.com/101806416/179398919-2dafd8db-2ffc-4a92-aad5-d3fce0f7254d.png)
+
+* __Source the environment__
+```
+source $HOME/.cargo/env
+```
+____
+### Clone and build nearcore project from GitHub
+
+
+
+
+
+
 

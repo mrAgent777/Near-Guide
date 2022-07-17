@@ -62,3 +62,75 @@ Change `private_key` to `secret_key`
   "secret_key": "ed25519:****"
 }
 ```
+> __Save__ `Ctrl+o`  `Enter`  `Ctrl+x`
+____
+* __Start the validator node__
+```
+cd nearcore
+target/release/neard run
+```
+
+* __Setup Systemd Command__
+```
+sudo nano /etc/systemd/system/neard.service
+```
+Paste 
+> Note. Change `root` to your paths
+```
+[Unit]
+Description=NEARd Daemon Service
+
+[Service]
+Type=simple
+User=root
+#Group=near
+WorkingDirectory=/root/.near
+ExecStart=/root/nearcore/target/release/neard run
+Restart=on-failure
+RestartSec=30
+KillSignal=SIGINT
+TimeoutStopSec=45
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+```
+> __Save__ `Ctrl+o`  `Enter`  `Ctrl+x`
+
+ * __Enable service__
+ ```
+sudo systemctl enable neard
+```
+
+* __Start service__
+```
+sudo systemctl start neard
+```
+
+* __If you need to make a change to service because of an error in the file. It has to be reloaded:__
+```
+sudo systemctl reload neard
+```
+
+* __Check logs__
+```
+journalctl -n 100 -f -u neard
+```
+
+### Becoming a Validator
+
+In order to become a validator and enter the validator set, a minimum set of success criteria must be met.
+
+* The node must be fully synced
+* The `validator_key.json` must be in place
+* The contract must be initialized with the public_key in `validator_key.json`
+* The account_id must be set to the staking pool contract id
+* There must be enough delegations to meet the minimum seat price. See the seat price [here.](https://explorer.shardnet.near.org/nodes/validators)
+* A proposal must be submitted by pinging the contract
+* Once a proposal is accepted a validator must wait 2-3 epoch to enter the validator set
+* Once in the validator set the validator must produce great than 90% of assigned blocks
+
+Check running status of validator node. If “Validator” is showing up, your pool is selected in the current validators list.
+
+
+

@@ -13,15 +13,20 @@ near call factory.shardnet.near create_staking_pool '{"staking_pool_id": "secdec
 ```
 
 > Note. From the example above, you need to replace:
->> Change `secdec` for your pool id
->> Change `secdec.shardnet.near` for your wallet
->> Change `Public key` for your `validator_key.json` file
+
+* __Change `secdec` for your pool id__
+
+* __Change `secdec.shardnet.near` for your wallet__
+
+* __Change `Public key` for your `validator_key.json` file__
+
+> Note. If there is a “True” at the End. Your pool is created. Check your pool is now visible on https://explorer.shardnet.near.org/nodes/validators
 
 * __To change the pool parameters, such as changing the amount of commission charged to 1%__
 ```
 near call secdec.factory.shardnet.near update_reward_fee_fraction '{"reward_fee_fraction": {"numerator": 1, "denominator": 100}}' --accountId secdec.shardnet.near --gas=300000000000000
 ```
-> Note. If there is a “True” at the End. Your pool is created. Check your pool is now visible on https://explorer.shardnet.near.org/nodes/validators
+
 ____
 ### Transactions Guide
 
@@ -38,7 +43,8 @@ near call <staking_pool_id> deposit_and_stake --amount <amount> --accountId <acc
 ```
 near call <staking_pool_id> unstake '{"amount": "<amount yoctoNEAR>"}' --accountId <accountId> --gas=300000000000000
 ```
-> Note. To unstake all
+
+* __To unstake all__
 ```
 near call <staking_pool_id> unstake_all --accountId <accountId> --gas=300000000000000
 ```
@@ -50,7 +56,7 @@ near call <staking_pool_id> unstake_all --accountId <accountId> --gas=3000000000
 near call <staking_pool_id> withdraw '{"amount": "<amount yoctoNEAR>"}' --accountId <accountId> --gas=300000000000000
 ```
 
-> Note. withdraw all
+* __withdraw all__
 ```
 near call <staking_pool_id> withdraw_all --accountId <accountId> --gas=300000000000000
 ```
@@ -61,10 +67,10 @@ near call <staking_pool_id> withdraw_all --accountId <accountId> --gas=300000000
 ```
 near call <staking_pool_id> ping '{}' --accountId <accountId> --gas=300000000000000
 ```
-
+____
 ### Balances
 
-> Note. Total Balance
+* __Total Balance__
 ```
 near view <staking_pool_id> get_account_total_balance '{"account_id": "<accountId>"}'
 ```
@@ -85,7 +91,7 @@ near view <staking_pool_id> get_account_unstaked_balance '{"account_id": "<accou
 ```
 near view <staking_pool_id> is_account_unstaked_balance_available '{"account_id": "<accountId>"}'
 ```
-
+____
 ### Pause / Resume Staking
 
 * __Pause__
@@ -97,6 +103,8 @@ near call <staking_pool_id> pause_staking '{}' --accountId <accountId>
 ```
 near call <staking_pool_id> resume_staking '{}' --accountId <accountId>
 ```
+____
+## Setup tools for monitoring node status.
 
 
 

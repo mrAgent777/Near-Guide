@@ -104,7 +104,7 @@ near call <staking_pool_id> pause_staking '{}' --accountId <accountId>
 near call <staking_pool_id> resume_staking '{}' --accountId <accountId>
 ```
 ____
-## [Setup tools for monitoring node status.](https://github.com/mrAgent777/Near-Guide/blob/main/Step%205%20:%20Setup%20tools%20for%20monitoring%20node%20status.md)
+## [Step 5 : Setup tools for monitoring node status.](https://github.com/mrAgent777/Near-Guide/blob/main/Step%205%20:%20Setup%20tools%20for%20monitoring%20node%20status.md)
 
 
 

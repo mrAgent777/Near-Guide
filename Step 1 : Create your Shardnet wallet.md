@@ -25,5 +25,5 @@ ____
 
 ![w6](https://user-images.githubusercontent.com/101806416/179373070-4a0095d3-34f2-42e6-be6c-9accf7be8dfe.png)
 ____
-## __Now we can move on to .__
+## __Now we can move on to [Step 2 : Setup a validator and sync it to the actual state of the network](https://github.com/mrAgent777/Near-Guide/blob/main/Step%202%20:%20Setup%20a%20validator%20and%20sync%20it%20to%20the%20actual%20state%20of%20the%20network.md).__
  

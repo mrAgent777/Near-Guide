@@ -182,7 +182,7 @@ cd nearcore
 > Note. The node is now running you can see log outputs in your console. Your node should be find peers, download headers to 100%, and then download blocks.
 >> ![v7](https://user-images.githubusercontent.com/101806416/179403606-a219dfa9-3e4b-4106-a995-6f9c0f437f56.png)
 ____
-Moving on [Step 3 : Activating the node as validator](https://github.com/mrAgent777/Near-Guide/blob/main/Step%203%20:%20Activating%20the%20node%20as%20validator.md)
+## Moving on [Step 3 : Activating the node as validator](https://github.com/mrAgent777/Near-Guide/blob/main/Step%203%20:%20Activating%20the%20node%20as%20validator.md)
 
 
 

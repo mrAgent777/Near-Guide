@@ -133,6 +133,6 @@ In order to become a validator and enter the validator set, a minimum set of suc
 Check running status of validator node. If “Validator” is showing up, your pool is selected in the current validators list.
 ___
 
-### Moving on step4
+## Moving on [Step 4 : Deploy a new staking pool for your validator](https://github.com/mrAgent777/Near-Guide/blob/main/Step%204%20:%20Deploy%20a%20new%20staking%20pool%20for%20your%20validator.md)
 
 

@@ -1,5 +1,8 @@
 ### Step 2 : Setup a validator and sync it to the actual state of the network
 ____
+### Server Requirements
+> ![hardware](https://user-images.githubusercontent.com/101806416/179969052-93251af9-265c-4b61-b6ae-f571d937629b.png)
+
 
 * __Before installation, let's check if our equipment is suitable:__
 ```

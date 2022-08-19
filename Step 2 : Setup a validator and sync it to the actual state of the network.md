@@ -123,9 +123,9 @@ cd nearcore
 git fetch
 ```
 
-* __Checkout master__
+* __Checkout to the commit needed. Please refer to the commit defined in__ [This file](https://github.com/near/stakewars-iii/blob/main/commit.md)
 ```
-git checkout master
+git checkout <commit>
 ```
 
 * __Compile nearcore binary__
@@ -161,24 +161,10 @@ rm ~/.near/config.json
 wget -O ~/.near/config.json https://s3-us-west-1.amazonaws.com/build.nearprotocol.com/nearcore-deploy/shardnet/config.json
 ```
 ____
-### Synchronizing the network with the last snapshot
-* __Install AWS Cli__
-```
-cd ..
-sudo apt-get install awscli -y
-```
-
-* __Download snapshot__
-```
-cd ~/.near
-aws s3 --no-sign-request cp s3://build.openshards.io/stakewars/shardnet_noarchive/data.tar.gz .  
-tar -xzvf data.tar.gz
-```
-____
 ### Run the node
 * __To start your node simply run the following__
 ```
-cd ..
+cd
 cd nearcore
 ./target/release/neard --home ~/.near run
 ```
